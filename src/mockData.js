@@ -11,7 +11,7 @@ export const usuarios = [
             tipos: ["Legajo del alumno", "Título del alumno", "Analítico"]
           },
           {
-            nombre: "Extensión universitaria",
+            nombre: "Departamento de extensión universitaria",
             tipos: ["Informe", "Contrato"]
           }
         ]
@@ -20,15 +20,15 @@ export const usuarios = [
         nombre: "Facultad de Ciencias Exactas",
         departamentos: [
           {
-            nombre: "Matemática",
+            nombre: "Departamento de Matemática",
             tipos: ["Tesis", "Proyecto", "Artículo de investigación"]
           },
           {
-            nombre: "Física",
+            nombre: "Departamento de Física",
             tipos: ["Informe", "Estudio", "Trabajo de campo"]
           },
           {
-            nombre: "Química",
+            nombre: "Departamento de Química",
             tipos: ["Informe de laboratorio", "Investigación"]
           }
         ]
@@ -37,15 +37,15 @@ export const usuarios = [
         nombre: "Facultad de Ingeniería",
         departamentos: [
           {
-            nombre: "Electrónica",
+            nombre: "Departamento de Electrónica",
             tipos: ["Tesis", "Proyecto", "Manual técnico"]
           },
           {
-            nombre: "Sistemas",
+            nombre: "Departamento de Sistemas",
             tipos: ["Desarrollo", "Análisis", "Sistemas Web"]
           },
           {
-            nombre: "Mecánica",
+            nombre: "Departamento de Mecánica",
             tipos: ["Informe técnico", "Diseño estructural"]
           }
         ]
@@ -60,23 +60,23 @@ export const usuarios = [
         tipo: "Legajo del alumno",
         url: "/archivos/derecho/LegajoAlumno1.pdf",
         metadata: {
-          dni: "30688161",
-          nombre: "Buigues Noelia",
+          DNI: "30688169",
+          nombre: "Noelia Buigues ",
           palabrasClave: ["legajo", "alumno"],
-          descripcion: "Legajo completo del alumno.",
+          descripcion: "Legajo completo del alumno Buigues Noelia",
           fecha: "2025-02-02"
         }
       },
       {
         unidadAcademica: "Facultad de Derecho",
         departamento: "Departamento de alumnos",
-        tipo: "Título del alumno",
+        tipo: "Legajo del alumno",
         url: "/archivos/derecho/TituloAlumno.pdf",
         metadata: {
-          DNI: "30745123",
-          nombre: "Patricia Bravo",
+          DNI: "30688161",
+          nombre: "Noelia Quevedo",
           palabrasClave: ["título", "alumno"],
-          descripcion: "Título del alumno.",
+          descripcion: "Título del alumno Noelia Quevedo.",
           fecha: "2025-03-15"
         }
       },
@@ -89,7 +89,7 @@ export const usuarios = [
           DNI: "14785625",
           nombre: "Marcela Bravo",
           palabrasClave: ["analítico", "informe"],
-          descripcion: "Informe analítico del alumno.",
+          descripcion: "Informe analítico del alumno Marcela Bravo.",
           fecha: "2025-03-15"
         }
       },
@@ -104,7 +104,7 @@ export const usuarios = [
           DNI: "30871234",
           nombre: "Lucía Fernández",
           palabrasClave: ["extensión", "informe", "universitaria"],
-          descripcion: "Informe sobre extensión universitaria.",
+          descripcion: "Informe sobre extensión universitaria de Lucía Fernández.",
           fecha: "2025-04-10"
         }
       },
@@ -117,7 +117,7 @@ export const usuarios = [
           DNI: "30981234",
           nombre: "Martín González",
           palabrasClave: ["contrato", "extensión"],
-          descripcion: "Contrato firmado para colaboración externa.",
+          descripcion: "Contrato firmado para colaboración externa de Martín González.",
           fecha: "2025-05-05"
         }
       },
@@ -125,7 +125,7 @@ export const usuarios = [
       // ✅ Facultad de Ciencias Exactas - Matemática
       {
         unidadAcademica: "Facultad de Ciencias Exactas",
-        departamento: "Matemática",
+        departamento: "Departamento de Matemática",
         tipo: "Tesis",
         url: "/archivos/tesis/Tesis1.pdf",
         metadata: {
@@ -138,7 +138,7 @@ export const usuarios = [
       },
       {
         unidadAcademica: "Facultad de Ciencias Exactas",
-        departamento: "Matemática",
+        departamento: "Departamento de Matemática",
         tipo: "Proyecto",
         url: "/archivos/tesis/Proyecto1.pdf",
         metadata: {
@@ -151,7 +151,7 @@ export const usuarios = [
       },
       {
         unidadAcademica: "Facultad de Ciencias Exactas",
-        departamento: "Matemática",
+        departamento: "Departamento de Matemática",
         tipo: "Artículo de investigación",
         url: "/archivos/tesis/ArticuloInvestigacion1.pdf",
         metadata: {
@@ -163,7 +163,7 @@ export const usuarios = [
         }
       },{
         unidadAcademica: "Facultad de Ciencias Exactas",
-        departamento: "Física",
+        departamento: "Departamento de Física",
         tipo: "Estudio",
         url: "/archivos/ciencias/EstudioFisica.pdf",
         metadata: {
@@ -176,7 +176,7 @@ export const usuarios = [
     },
     {
         unidadAcademica: "Facultad de Ciencias Exactas",
-        departamento: "Física",
+        departamento: "Departamento de Física",
         tipo: "Trabajo de campo",
         url: "/archivos/ciencias/TrabajoCampoFisica.pdf",
         metadata: {
@@ -226,7 +226,7 @@ export const usuarios = [
     documentos: [
       {
         unidadAcademica: "Facultad de Medicina",
-        departamento: "Anatomía",
+        departamento: "Departamento de Anatomía",
         tipo: "Investigación",
         url: "/archivos/medicina/Investigacion1.pdf",
         metadata: {
@@ -239,7 +239,7 @@ export const usuarios = [
       },
       {
         unidadAcademica: "Facultad de Medicina",
-        departamento: "Fisiología",
+        departamento: "Departamento de Fisiología",
         tipo: "Estudio clínico",
         url: "/archivos/medicina/Estudio1.pdf",
         metadata: {
