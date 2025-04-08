@@ -61,6 +61,7 @@ const Navegacion = ({ usuario, onUnidadSeleccionada, onDepartamentoSeleccionado,
           </ul>
         </>
       )}
+      
 
       {/* 🔹 Mostrar Tipos dentro del Departamento */}
       {vistaActual === "tipos" && departamentoSeleccionado && (

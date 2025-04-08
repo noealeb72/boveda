@@ -58,12 +58,12 @@ export const usuarios = [
         unidadAcademica: "Facultad de Derecho",
         departamento: "Departamento de alumnos",
         tipo: "Legajo del alumno",
-        url: "/archivos/derecho/LegajoAlumno1.pdf",
+        url: "/archivos/derecho/GARCIA_GOMEZ_ANDRES_17106570.pdf",
         metadata: {
-          DNI: "30688169",
-          nombre: "Noelia Buigues ",
+          DNI: "17106570",
+          nombre: "GARCIA GOMEZ  ANDRES",
           palabrasClave: ["legajo", "alumno"],
-          descripcion: "Legajo completo del alumno Buigues Noelia",
+          descripcion: "Legajo completo del alumno GARCIA GOMEZ  ANDRES",
           fecha: "2025-02-02"
         }
       },
@@ -71,12 +71,12 @@ export const usuarios = [
         unidadAcademica: "Facultad de Derecho",
         departamento: "Departamento de alumnos",
         tipo: "Legajo del alumno",
-        url: "/archivos/derecho/TituloAlumno.pdf",
+        url: "/archivos/derecho/GARCIA_STELLA_MARIS.pdf",
         metadata: {
-          DNI: "30688161",
-          nombre: "Noelia Quevedo",
+          DNI: "10137679",
+          nombre: "GARCIA  STELLA MARIS",
           palabrasClave: ["título", "alumno"],
-          descripcion: "Título del alumno Noelia Quevedo.",
+          descripcion: "Título del alumno GARCIA  STELLA MARIS.",
           fecha: "2025-03-15"
         }
       },
@@ -127,12 +127,13 @@ export const usuarios = [
         unidadAcademica: "Facultad de Ciencias Exactas",
         departamento: "Departamento de Matemática",
         tipo: "Tesis",
-        url: "/archivos/tesis/Tesis1.pdf",
+        url: "/archivos/tesis/GARCIA_DIAZ_SILVIA_MARINA_14895905.pdf",
         metadata: {
-          DNI: "30523111",
-          nombre: "José Pérez",
+          DNI: "14895905",
+          legajo: "88418",
+          nombre: "GARCIA DIAZ SILVIA MARINA",
           palabrasClave: ["álgebra", "matemática", "ecuación"],
-          descripcion: "Estudio sobre álgebra lineal avanzada.",
+          descripcion: "Documentación de GARCIA  DIAZ SILVIA MARINA.",
           fecha: "2025-07-20"
         }
       },
@@ -140,12 +141,12 @@ export const usuarios = [
         unidadAcademica: "Facultad de Ciencias Exactas",
         departamento: "Departamento de Matemática",
         tipo: "Proyecto",
-        url: "/archivos/tesis/Proyecto1.pdf",
+        url: "/archivos/tesis/GARCIA_LILIANA_MONICA_11635472.pdf",
         metadata: {
-          DNI: "30685412",
-          nombre: "Laura Gómez",
+          DNI: "11635472",
+          nombre: "GARCIA  LILIANA MONICA",
           palabrasClave: ["proyecto", "matemática"],
-          descripcion: "Proyecto sobre geometría avanzada.",
+          descripcion: "Informaciòn sobre GARCIA  LILIANA MONICA.",
           fecha: "2025-08-10"
         }
       },

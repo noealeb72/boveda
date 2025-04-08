@@ -197,7 +197,7 @@ const Buscador = ({ documentos }) => {
             <table style={styles.table}>
               <thead>
                 <tr>
-                  <th style={styles.th}>Título</th>
+                  <th style={styles.th}>Tipo Documento</th>
                   <th style={styles.th}>Fecha</th>
                   <th style={styles.th}>Descripción</th>
                   <th style={styles.th}>Acciones</th>
