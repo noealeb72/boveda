@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineSearch, AiOutlineClose } from "react-icons/ai";
-import { FaEye, FaDownload } from "react-icons/fa";
+import { FaEye, FaDownload,FaHistory } from "react-icons/fa";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { es } from "date-fns/locale";
+
 
 const Buscador = ({ documentos }) => {
   const [filtros, setFiltros] = useState({});
@@ -12,7 +13,8 @@ const Buscador = ({ documentos }) => {
   const [resultados, setResultados] = useState([]);
   const [palabrasClave, setPalabrasClave] = useState([]);
   const [mostrarFiltros, setMostrarFiltros] = useState(false);
-
+  const [mostrarHistorial, setMostrarHistorial] = useState(false);
+  const [docActual, setDocActual] = useState(null);
   useEffect(() => {
     if (documentos.length > 0) {
       const camposUnicos = [
@@ -129,12 +131,18 @@ const Buscador = ({ documentos }) => {
     document.body.removeChild(link);
   };
 
+  const handleMostrarHistorial = (doc) => {
+    setDocActual(doc);
+    setMostrarHistorial(true);
+  };
+
   const handleVer = (url) => {
     window.open(url, "_blank");
   };
 
   return (
     <>
+      
       {/* ✅ Acordeón de filtros personalizado */}
       <div style={styles.acordeon}>
         <div style={styles.acordeonHeader} onClick={() => setMostrarFiltros(!mostrarFiltros)}>
@@ -223,6 +231,13 @@ const Buscador = ({ documentos }) => {
                       <button style={styles.actionButton} onClick={() => handleDescargar(doc.url)}>
                         <FaDownload /> Descargar
                       </button>
+                      <button
+                          style={styles.actionButton}
+                          onClick={() => handleMostrarHistorial(doc)}
+                        >
+                          <FaHistory /> Histórico
+                        </button>
+
                     </td>
                   </tr>
                 ))}
@@ -232,7 +247,81 @@ const Buscador = ({ documentos }) => {
         )}
       </div>
       )}
+      {mostrarHistorial && docActual && (
+  <div style={styles.modalOverlay}>
+    <div style={{ ...styles.modalContent, position: 'relative' }}>
+      <button
+        onClick={() => setMostrarHistorial(false)}
+        style={styles.closeAbsolute}
+        aria-label="Cerrar"
+      >
+        <AiOutlineClose />
+      </button>
+
+      <h3>Histórico del archivo: {docActual.metadata?.nombre || "Sin nombre"}</h3>
+
+      <table style={styles.table}>
+        <thead>
+          <tr>
+            <th style={styles.th}>Fecha</th>
+            <th style={styles.th}>Usuario</th>
+            <th style={styles.th}>Movimiento</th>
+            <th style={styles.th}>ID Transacción</th>
+          </tr>
+        </thead>
+        <tbody>
+  {[
+    {
+      fecha: "05/02/2024",
+      usuario: "Admin",
+      tipo: "Creación del registro del documento",
+      transaccion: "458177",
+    },
+    
+    
+    {
+      fecha: "08/02/2025",
+      usuario: "Usuario1",
+      tipo: "Descarga del documento",
+      transaccion: "458180",
+    },
+    {
+      fecha: "09/02/2025",
+      usuario: "Usuario3",
+      tipo: "Visualización del documento",
+      transaccion: "458181",
+    },
+    {
+      fecha: "10/02/2025",
+      usuario: "Admin",
+      tipo: "Visualización del documento",
+      transaccion: "458182",
+    },
+    {
+      fecha: "11/02/2025",
+      usuario: "Usuario5",
+      tipo: "Visualización del documento",
+      transaccion: "458183",
+    },
+  ]
+    .sort(() => Math.random() - 0.5) // <-- mezcla aleatoriamente
+    .map((h, i) => (
+      <tr key={i}>
+        <td style={styles.td}>{h.fecha}</td>
+        <td style={styles.td}>{h.usuario}</td>
+        <td style={styles.td}>{h.tipo}</td>
+        <td style={styles.td}>{h.transaccion}</td>
+      </tr>
+    ))}
+</tbody>
+
+      </table>
+    </div>
+  </div>
+)}
+
     </>
+
   );
 };
 
@@ -364,6 +453,39 @@ const styles = {
     gap: "5px",
     marginRight: "5px",
   },
+  modalOverlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 1000,
+  },
+  modalContent: {
+    backgroundColor: "#fff",
+    padding: "30px",
+    borderRadius: "8px",
+    width: "600px",
+    maxHeight: "80vh",
+    overflowY: "auto",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+  },
+  closeAbsolute: {
+    position: "absolute",
+    top: "15px",
+    right: "15px",
+    background: "none",
+    border: "none",
+    fontSize: "22px",
+    cursor: "pointer",
+    color: "#D32F2F",
+  }
+  
+  
 };
 
 export default Buscador;
