@@ -131,7 +131,12 @@ const styles = {
   icon: {
     marginRight: "10px",
     fontSize: "18px",
-  },
+    minWidth: "18px", // fuerza ancho uniforme
+    minHeight: "18px", // fuerza alto uniforme
+    display: "inline-block",
+    verticalAlign: "middle", // asegura alineación con el texto
+  }
+  
 };
 
 export default Navegacion;
